@@ -1,0 +1,21 @@
+﻿@model alannafranco.Models.Genero
+
+@{
+    ViewBag.Title = "Excluir Gênero";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Tem certeza que deseja excluir o gênero "@Html.DisplayFor(model => model.Descricao)" ?</h3>
+<div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-danger" />
+            @Html.ActionLink("Voltar", "Index")
+         </div>
+    }
+</div>
